@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_user_banners",
+  "info": {
+    "displayName": "UserList",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "User": {
+      "type": "component",
+      "component": "shared.picture",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

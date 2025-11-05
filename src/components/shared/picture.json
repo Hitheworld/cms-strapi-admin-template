@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_pictures",
+  "info": {
+    "displayName": "Picture",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "url": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
