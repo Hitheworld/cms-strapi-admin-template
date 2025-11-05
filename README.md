@@ -1,5 +1,9 @@
 # 🚀 Getting started with Strapi
 
+
+帐号: 123456@strapi.com
+密码: Ab123456
+
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
 ### `develop`
