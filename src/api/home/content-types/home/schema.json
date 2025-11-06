@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "SEO": {
+    "seo": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -25,7 +25,7 @@
       "component": "shared.seo",
       "repeatable": false
     },
-    "Slideshow": {
+    "slideshow": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -35,15 +35,20 @@
       "component": "shared.slideshow",
       "repeatable": true
     },
-    "LogoBanner": {
-      "type": "component",
+    "swiperLogo": {
+      "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.user-banner",
-      "repeatable": true
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

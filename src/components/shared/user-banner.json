@@ -5,12 +5,6 @@
     "icon": "stack"
   },
   "options": {},
-  "attributes": {
-    "User": {
-      "type": "component",
-      "component": "shared.picture",
-      "repeatable": true
-    }
-  },
+  "attributes": {},
   "config": {}
 }

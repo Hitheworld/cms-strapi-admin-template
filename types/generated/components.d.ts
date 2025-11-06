@@ -11,18 +11,6 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedPicture extends Struct.ComponentSchema {
-  collectionName: 'components_shared_pictures';
-  info: {
-    displayName: 'Picture';
-    icon: 'picture';
-  };
-  attributes: {
-    alt: Schema.Attribute.String;
-    url: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -82,7 +70,8 @@ export interface SharedSlideshow extends Struct.ComponentSchema {
   };
   attributes: {
     desc: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
     showBtn: Schema.Attribute.Boolean;
     tips: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -95,16 +84,13 @@ export interface SharedUserBanner extends Struct.ComponentSchema {
     displayName: 'UserList';
     icon: 'stack';
   };
-  attributes: {
-    User: Schema.Attribute.Component<'shared.picture', true>;
-  };
+  attributes: {};
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.media': SharedMedia;
-      'shared.picture': SharedPicture;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
