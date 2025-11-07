@@ -62,14 +62,17 @@
         "shared.slider"
       ]
     },
-    "context": {
-      "type": "richtext",
-      "required": true
-    },
     "tags": {
       "type": "component",
       "component": "shared.tags",
       "repeatable": true
+    },
+    "context": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   }
 }
