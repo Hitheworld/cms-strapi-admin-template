@@ -494,6 +494,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         maxLength: 80;
       }>;
     isHot: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    link: Schema.Attribute.String;
+    linkName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

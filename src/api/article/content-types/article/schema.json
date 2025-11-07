@@ -73,6 +73,12 @@
       "options": {
         "preset": "defaultHtml"
       }
+    },
+    "linkName": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
