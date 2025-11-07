@@ -72,9 +72,28 @@ export interface SharedSlideshow extends Struct.ComponentSchema {
     desc: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
+    mobileImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     showBtn: Schema.Attribute.Boolean;
     tips: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTags extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tags';
+  info: {
+    displayName: 'Tags';
+    icon: 'priceTag';
+  };
+  attributes: {
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 10;
+      }>;
   };
 }
 
@@ -96,6 +115,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.slideshow': SharedSlideshow;
+      'shared.tags': SharedTags;
       'shared.user-banner': SharedUserBanner;
     }
   }

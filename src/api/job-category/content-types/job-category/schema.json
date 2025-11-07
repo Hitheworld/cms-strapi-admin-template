@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_categorys",
+  "info": {
+    "singularName": "job-category",
+    "pluralName": "job-categorys",
+    "displayName": "招聘分类管理"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 6,
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "jobList": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job.job"
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "商旅动态文章管理",
     "description": "Create your blog content"
   },
   "options": {
@@ -13,11 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 100,
+      "required": true
+    },
+    "isHot": {
+      "type": "boolean",
+      "required": false,
+      "default": false
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "maxLength": 80,
+      "required": true
     },
     "slug": {
       "type": "uid",
@@ -26,8 +34,12 @@
     "cover": {
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "author": {
       "type": "relation",
@@ -43,7 +55,21 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
+    },
+    "context": {
+      "type": "richtext",
+      "required": true
+    },
+    "tags": {
+      "type": "component",
+      "component": "shared.tags",
+      "repeatable": true
     }
   }
 }
